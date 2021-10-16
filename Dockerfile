@@ -25,5 +25,5 @@ VOLUME [ "/data" ]
 ENTRYPOINT [ "/entrypoint.sh" ]
 CMD [ "smbd", "-FS", "--no-process-group" ]
 
-HEALTHCHECK --interval=30s --timeout=30s \
+HEALTHCHECK --interval=120s --timeout=45s \
   CMD smbclient -L \\localhost -U % -m SMB3
